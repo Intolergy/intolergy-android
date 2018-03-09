@@ -29,6 +29,11 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".Category"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".FindProduct" />
+        <activity android:name=".FindLocation"></activity>
     </application>
 
 </manifest>
