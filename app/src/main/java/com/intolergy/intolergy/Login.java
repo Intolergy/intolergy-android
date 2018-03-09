@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity {
         if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
             Log.d("login","correcto");
             //correcct password
+            startActivity(new Intent(this,MainActivity.class));
         }else{
             Log.d("login","incorrecto");
             //wrong password
