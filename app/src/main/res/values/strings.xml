@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Intolergy</string>
     <string name="register_name">Register</string>
+    <string name="search_restaurant">Search Restaurant</string>
+
 </resources>

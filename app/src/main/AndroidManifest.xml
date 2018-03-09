@@ -4,20 +4,25 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/intolergy"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/intolergy"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"  android:theme="@style/NoActionBar">
+        <activity
+            android:name=".Login"
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" android:label="@string/register_name">
-        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/register_name"></activity>
+        <activity android:name=".SearchRestaurant"
+            android:label="@string/search_restaurant"></activity>
     </application>
 
 </manifest>
