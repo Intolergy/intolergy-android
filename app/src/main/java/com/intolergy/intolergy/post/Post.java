@@ -8,10 +8,10 @@ public class Post {
     String image;
 
     public Post(int id,String title, String body, String user, String image){
-        id=id;
-        title=title;
-        body=body;
-        user=user;
-        image=image;
+        this.id=id;
+        this.title=title;
+        this.body=body;
+        this.user=user;
+        this.image=image;
     }
 }

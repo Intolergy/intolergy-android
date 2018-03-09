@@ -24,7 +24,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PostViewHolder>{
 
     @Override
     public PostViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.post_cardview, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_post, viewGroup, false);
         PostViewHolder pvh = new PostViewHolder(v);
         return pvh;
     }
@@ -33,7 +33,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PostViewHolder>{
     public void onBindViewHolder(PostViewHolder personViewHolder, int i) {
         Post post=posts.get(i);
         personViewHolder.title.setText(post.title);
-        personViewHolder.body.setText(post.body);
         personViewHolder.user.setText(post.user);
         try {
             URL url = new URL(post.image);
@@ -50,10 +49,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PostViewHolder>{
         return posts.size();
     }
 
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView title;
-        TextView body;
         TextView user;
         ImageView image;
 
@@ -61,7 +64,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PostViewHolder>{
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.post_cv);
             title = (TextView)itemView.findViewById(R.id.post_title);
-            body = (TextView)itemView.findViewById(R.id.post_body);
             image = (ImageView)itemView.findViewById(R.id.post_image);
             user = (TextView) itemView.findViewById(R.id.post_user);
         }
