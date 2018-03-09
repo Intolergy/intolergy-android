@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Intolergy</string>
+    <string name="register_name">Register</string>
 </resources>
