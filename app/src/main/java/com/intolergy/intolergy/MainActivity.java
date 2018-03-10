@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Log.d("main","entra");
-                startActivity(new Intent(v.getContext(), Find_Product.class));
+                startActivity(new Intent(v.getContext(), Category.class));
             }
         });
         homeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 Log.d("main","entra");
-                startActivity(new Intent(v.getContext(), Category.class));
+                startActivity(new Intent(v.getContext(), MainActivity.class));
             }
         });
         restaurantIcon.setOnClickListener(new View.OnClickListener() {

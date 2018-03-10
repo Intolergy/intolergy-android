@@ -15,7 +15,7 @@
         android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +27,7 @@
         android:layout_marginTop="112dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Barcode"
+        android:hint="Barcode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +39,7 @@
         android:layout_marginTop="164dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Description"
+        android:hint="Description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="URL attachment"
+        android:hint="URL attachment"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="412dp"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -16,11 +16,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="300px"
                 android:id="@+id/product_image"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
                 />
         <RelativeLayout
             android:layout_width="match_parent"

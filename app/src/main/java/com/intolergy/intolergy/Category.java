@@ -29,7 +29,7 @@ public class Category extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Log.d("main","entra");
-                startActivity(new Intent(v.getContext(), Category.class));
+                startActivity(new Intent(v.getContext(), MainActivity.class));
             }
         });
         restaurantIcon.setOnClickListener(new View.OnClickListener() {

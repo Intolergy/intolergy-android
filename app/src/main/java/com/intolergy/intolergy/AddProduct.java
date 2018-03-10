@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class AddProduct extends AppCompatActivity {
 
     private static String nombre;
@@ -45,7 +48,20 @@ public class AddProduct extends AppCompatActivity {
                 String barcode2 = barcoded.getText().toString();
                 String descripted2 = descripted.getText().toString();
                 String urled2 =urled.getText().toString();
-                startActivity(new Intent(view.getContext(), MainActivity.class));
+                JSONObject json =new JSONObject();
+                try {
+                    json.put("name",name2);
+                    json.put("gtin",barcode2);
+                    json.put("description",descripted2);
+                    json.put("image",urled2);
+                    json.put("intolerances","gluten, lactose");
+                    System.out.println(ApiClient.postProduct(json));
+                    if(!ApiClient.postProduct(json).getBoolean("error")) {
+                        startActivity(new Intent(view.getContext(), MainActivity.class));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 //Enviar aquí en función a las variables true y false arriba
             }
         });

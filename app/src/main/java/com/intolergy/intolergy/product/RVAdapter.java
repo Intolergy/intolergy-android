@@ -41,15 +41,17 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PostViewHolder>{
         personViewHolder.user.setText(product.user);
         personViewHolder.downvotes.setText(String.valueOf(product.negative));
         personViewHolder.upvotes.setText(String.valueOf(product.positive));
-
-        try {
-            URL url = new URL(product.image);
-            Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            personViewHolder.image.setImageBitmap(bmp);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(product.image!=null) {
+            try {
+                URL url = new URL(product.image);
+                Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                personViewHolder.image.setImageBitmap(bmp);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else{
+            personViewHolder.image.setImageResource(R.drawable.ic_food_grey600_48dp);
         }
-
     }
 
     @Override
