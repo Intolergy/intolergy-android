@@ -1,15 +1,22 @@
 package com.intolergy.intolergy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.RadioButton;
+import android.widget.EditText;
 
-public class FindLocation extends AppCompatActivity {
-    private static boolean preferences=false;
-    private static boolean intolerances=false;
-    private static boolean zone=false;
+public class AddProduct extends AppCompatActivity {
+
+    private static String nombre;
+    private static String description;
+    private static String barcode;
+    private static String URL;
+    private Button btnLogin;
+    private EditText named,barcoded,descripted,urled;
+
     private static boolean egg=false;
     private static boolean lactose=false;
     private static boolean fructose=false;
@@ -18,40 +25,32 @@ public class FindLocation extends AppCompatActivity {
     private static boolean shellfish=false;
     private static boolean nuts=false;
     private static boolean pulse=false;
+
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_location);
-    }
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
+        setContentView(R.layout.activity_add_product);
+        btnLogin = (Button)findViewById(R.id.button);
+        named = (EditText) findViewById(R.id.name);
+        barcoded = (EditText) findViewById(R.id.barcode);
+        descripted = (EditText) findViewById(R.id.descript);
+        urled = (EditText) findViewById(R.id.Url);
 
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radio_preferences:
-                if (checked){
-                    preferences=true;
-                    intolerances=false;
-                    zone=false;
-                }
-                break;
-            case R.id.radio_intolerances:
-                if (checked){
-                    preferences=false;
-                    intolerances=true;
-                    zone=false;
-                }
-                break;
-            case R.id.radio_zone:
-                if (checked){
-                    preferences=false;
-                    intolerances=false;
-                    zone=true;
-                }
-                break;
+        btnLogin.setOnClickListener(new View.OnClickListener() {
 
-        }
+            public void onClick(View view) {
+                String name2 = named.getText().toString();
+                String barcode2 = barcoded.getText().toString();
+                String descripted2 = descripted.getText().toString();
+                String urled2 =urled.getText().toString();
+                startActivity(new Intent(view.getContext(), MainActivity.class));
+                //Enviar aquí en función a las variables true y false arriba
+            }
+        });
+
+
     }
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
@@ -109,6 +108,4 @@ public class FindLocation extends AppCompatActivity {
                 break;
         }
     }
-
-
 }

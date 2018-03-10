@@ -1,12 +1,16 @@
 package com.intolergy.intolergy;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 
-public class FindProduct extends AppCompatActivity {
+public class Find_Restaurant extends AppCompatActivity {
     private static boolean preferences=false;
     private static boolean intolerances=false;
     private static boolean zone=false;
@@ -18,12 +22,47 @@ public class FindProduct extends AppCompatActivity {
     private static boolean shellfish=false;
     private static boolean nuts=false;
     private static boolean pulse=false;
+    private Button find;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_product);
-    }
+        setContentView(R.layout.activity_find);
 
+        ImageView foodIcon=(ImageView)findViewById(R.id.foodIcon4);
+        ImageView homeIcon=(ImageView)findViewById(R.id.homeIcon4);
+        ImageView restaurantIcon = (ImageView)findViewById(R.id.restaurantIcon4);
+        foodIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Log.d("main","entra");
+                startActivity(new Intent(v.getContext(), Find_Product.class));
+            }
+        });
+        homeIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Log.d("main","entra");
+                startActivity(new Intent(v.getContext(), Category.class));
+            }
+        });
+        restaurantIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+            }
+        });
+
+        find = (Button)findViewById(R.id.button2);
+
+        find.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+                 startActivity(new Intent(view.getContext(), SearchRestaurant.class));
+                //Enviar aquí en función a las variables true y false arriba
+            }
+        });
+
+    }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -47,7 +86,6 @@ public class FindProduct extends AppCompatActivity {
 
         }
     }
-
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();
@@ -104,4 +142,6 @@ public class FindProduct extends AppCompatActivity {
                 break;
         }
     }
+
+
 }

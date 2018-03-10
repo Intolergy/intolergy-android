@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Intolergy</string>
-    <string name="register_name">Register</string>
-    <string name="search_restaurant">Search Restaurant</string>
+    <string name="register_name">Intolergy - Register</string>
+    <string name="search_restaurant">Intolergy - Restaurants</string>
+    <string name="add_product">Intolergy - Add Product</string>
+    <string name="news">Intolergy - News</string>
+    <string name="products">Intolergy - Products</string>
+    <string name="search_restaurant_by">Intolergy - Search restaurant by</string>
+    <string name="search_product_by">Intolergy - Search product by</string>
+    <string name="search_by">Intolergy - Search by</string>
 </resources>

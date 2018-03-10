@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
 
     public void register(View v) {
         Log.d("login","contraseña olvidada");
-        Intent intent = new Intent(this, FindProduct.class);
+        Intent intent = new Intent(this, Register.class);
         startActivity(intent);
     }
 
@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
         if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
             Log.d("login","correcto");
             //correcct password
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }else{
             Log.d("login","incorrecto");
             //wrong password
