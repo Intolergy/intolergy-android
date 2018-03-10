@@ -1,5 +1,6 @@
 package com.intolergy.intolergy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -26,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         homeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                System.out.println("HomeIcon");
+                startActivity(new Intent(v.getContext(), Category.class));
             }
         });
         restaurantIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                System.out.println("RestaurantIcon");
+                startActivity(new Intent(v.getContext(), FindLocation.class));
             }
         });
     }

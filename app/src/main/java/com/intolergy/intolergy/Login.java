@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
 
     public void register(View v) {
         Log.d("login","contraseña olvidada");
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, FindProduct.class);
         startActivity(intent);
     }
 

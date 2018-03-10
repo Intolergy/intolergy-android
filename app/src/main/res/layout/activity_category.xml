@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intolergy.intolergy.Category">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/barcode"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/barcode" />
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/plus"
+            android:layout_marginRight="5dp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <GridLayout
+        android:id="@+id/GridLayout"
+        android:layout_width="367dp"
+        android:layout_height="477dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595"
+        tools:context=".GridXMLActivity">
+
+        <TextView
+            android:id="@+id/chocolateText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_row="0"
+            android:text="Chocolate"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/donuText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="Snack"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/drinkText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="Drink"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/chocolate"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:background="@drawable/chocolate" />
+
+        <ImageView
+            android:id="@+id/donut"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:background="@drawable/donut" />
+
+        <ImageView
+            android:id="@+id/drink"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:background="@drawable/drink" />
+
+
+        <TextView
+            android:id="@+id/fishText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:text="Fish"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/meatText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:text="Meat"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/milkText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:text="Milk"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/fish"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="3"
+            android:background="@drawable/fish" />
+
+        <ImageView
+            android:id="@+id/meat"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="3"
+            android:background="@drawable/meat" />
+
+        <ImageView
+            android:id="@+id/milk"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="3"
+            android:background="@drawable/milk" />
+
+        <TextView
+            android:id="@+id/oilText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_row="4"
+            android:text="Oil"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/oatText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
+            android:layout_row="4"
+            android:text="Cereal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/pastaText"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
+            android:layout_row="4"
+            android:text="Pasta"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/oat"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="5"
+            android:background="@drawable/oat" />
+
+        <ImageView
+            android:id="@+id/oil"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="5"
+            android:background="@drawable/oil" />
+
+        <ImageView
+            android:id="@+id/spaguetti"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="5"
+            android:background="@drawable/spaghetti" />
+    </GridLayout>
+
+
+</android.support.constraint.ConstraintLayout>

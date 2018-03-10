@@ -84,8 +84,7 @@ public class Register extends AppCompatActivity {
         EditText email = (EditText)findViewById(R.id.email);
         EditText name = (EditText)findViewById(R.id.name);
         EditText postalCode = (EditText)findViewById(R.id.postalcode);
-
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }
